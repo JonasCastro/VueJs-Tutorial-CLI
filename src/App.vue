@@ -23,5 +23,9 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
+  h1{
+    color: brown;
+  }
 </style>
