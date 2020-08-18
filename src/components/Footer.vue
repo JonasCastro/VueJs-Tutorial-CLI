@@ -4,6 +4,8 @@
     </footer>
 </template>
 <script>
+// imports
+import { bus } from '../main';
 export default {
     props: {
       title: {
@@ -14,6 +16,11 @@ export default {
     data(){
         return{
         }
+    },
+    created(){
+        bus.$on('titleChanged', (data) => {
+            this.title = data;
+        });
     }
 }
 </script>
